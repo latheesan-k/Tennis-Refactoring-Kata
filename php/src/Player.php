@@ -4,11 +4,27 @@ namespace src;
 
 class Player
 {
+    /**
+     * @var string
+     */
     private $name;
+
+    /**
+     * @var int
+     */
     private $points;
+
+    /**
+     * @var string
+     */
     private $result = '';
 
-    public function __construct($name, $points = 0)
+    /**
+     * Player constructor.
+     * @param string $name
+     * @param int $points
+     */
+    public function __construct(string $name, int $points = 0)
     {
         $this->name = $name;
         $this->points = $points;
@@ -46,7 +62,7 @@ class Player
         return $this->result;
     }
 
-    public function incrementPoints()
+    public function incrementPoints(): void
     {
         $this->points++;
     }
